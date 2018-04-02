@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             speechRecognizer.stop()
             sender.setTitle("Recognize", for: .normal)
         } else {
-            try! speechRecognizer.recognize(url: .defaultURL) { (text, isFinal, error) in
+            try! speechRecognizer.recognize { (text, isFinal, error) in
                 if isFinal || error != nil {
                     sender.setTitle("Recognize", for: .normal)
                 }
