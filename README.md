@@ -10,8 +10,8 @@ speechRecorder.stop()
 ```
 
 ```swift
-try! speechRecorder.record(to: .document(filePath: "voice"))
-try! speechRecorder.record(to: .temporary(filePath: "voice"))
+try! speechRecorder.record(to: .document(filePath: "voice/song.m4a"))
+try! speechRecorder.record(to: .temporary(filePath: "voice/song.m4a"))
 ```
 
 # Play
@@ -25,21 +25,32 @@ speechPlayer.stop()
 ```
 
 ```swift
-try! speechPlayer.play(url: .web(url: "https://hoge.com"))
-try! speechPlayer.record(url: .document(filePath: "voice"))
+try! speechPlayer.play(url: .web(url: "https://foo.com/song.m4a"))
+try! speechPlayer.play(url: .document(filePath: "voice/song.m4a"))
 ```
 
 # Speech Recognition
 
 ```swift
 let speechRecognizer = SpeechRecognizer(locale: .init(identifier: "ja_JP"))!
-try! speechRecognizer.recognize(url: .defaultURL) { (text, isFinal, error) in
+try! speechRecognizer.recognize { (text, isFinal, error) in
     if isFinal || error != nil {
         print("finished")
     }
     self.textView.text = text
 }
 speechRecognizer.stop()
+```
+
+## Speech Recognition from an audio file
+
+```swift
+try! speechRecognizer.recognize(url: .defaultURL) { (text, isFinal, error) in
+	if isFinal || error != nil {
+		print("finished")
+	}
+	self.textView.text = text
+}
 ```
 
 # Contributing
