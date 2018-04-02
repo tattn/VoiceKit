@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             speechRecorder.stop()
             sender.setTitle("Record", for: .normal)
         } else {
-            try! speechRecorder.record()
+            try! speechRecorder.record(to: .document(filePath: "voice"))
             sender.setTitle("Stop", for: .normal)
         }
     }
