@@ -83,10 +83,10 @@ speechRecognizer.stop()
 
 ```swift
 try! speechRecognizer.recognize(url: .defaultURL) { (text, isFinal, error) in
-	if isFinal || error != nil {
-		print("finished")
-	}
-	self.textView.text = text
+    if isFinal || error != nil {
+        print("finished")
+    }
+    self.textView.text = text
 }
 ```
 
