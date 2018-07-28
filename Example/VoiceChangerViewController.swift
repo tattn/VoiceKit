@@ -26,10 +26,14 @@ class VoiceChangerViewController: UIViewController {
         } catch {
             print(error)
         }
-
     }
 
-    @IBAction func didChangePlalybackRate(_ sender: UISlider) {
+    @IBAction func didChangePlaybackRate(_ sender: UISlider) {
         configuration.playBackRate = sender.value
     }
+
+    @IBAction func didChangePitch(_ sender: UISlider) {
+        configuration.pitch = sender.value
+    }
+
 }
