@@ -62,8 +62,8 @@ speechPlayer.stop()
 ```
 
 ```swift
-try! speechPlayer.play(url: .web(url: "https://foo.com/song.m4a"))
-try! speechPlayer.play(url: .document(filePath: "voice/song.m4a"))
+let speechPlayer = SpeechPlayer(url: .web(url: "https://foo.com/song.m4a"))
+let speechPlayer = SpeechPlayer(url: .document(filePath: "voice/song.m4a"))
 ```
 
 ## Speech Recognition
