@@ -11,40 +11,37 @@ import AVFoundation
 
 public final class SpeechPlayer: NSObject {
 
-    private var player: AVAudioPlayer?
+    private let player: AVAudioPlayer
 
     public typealias Completion = (Error?) -> Void
     private var completion: Completion?
 
-    public var playing: Bool {
-        return player != nil
+    public var isPlaying: Bool {
+        return player.isPlaying
     }
 
-    public required override init() {
+    public required init(url: AudioURL = .defaultURL) {
+        player = try! AVAudioPlayer(contentsOf: url.url)
         super.init()
+        player.enableRate = true
+        player.delegate = self
     }
 
-    public func play(url: AudioURL = .defaultURL,
-                     completion: Completion? = nil) throws {
-        guard !playing else { throw Errors.alreadyPlaying }
-        
-        let player = try! AVAudioPlayer(contentsOf: url.url)
-        self.player = player
+    public func play(with configuration: Configuration = .init(), completion: Completion? = nil) throws {
+        stop()
 
-        player.delegate = self
+        player.rate = configuration.playBackRate
         player.play()
         self.completion = completion
     }
 
     public func stop() {
-        player?.stop()
-        player = nil
+        player.stop()
     }
 
     private func callCompletion(with error: Error?) {
         completion?(error)
         completion = nil
-        player = nil
     }
 }
 
@@ -62,5 +59,15 @@ extension SpeechPlayer {
     public enum Errors: Error {
         case alreadyPlaying
         case unknown
+    }
+
+    public struct Configuration {
+        public var playBackRate: Float
+    }
+}
+
+extension SpeechPlayer.Configuration {
+    public init() {
+        self.init(playBackRate: 1.0)
     }
 }

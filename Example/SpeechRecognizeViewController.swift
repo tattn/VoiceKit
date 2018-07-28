@@ -34,7 +34,7 @@ class SpeechRecognizeViewController: UIViewController {
     }
 
     @IBAction func didTapPlayButton(_ sender: UIButton) {
-        if speechPlayer.playing {
+        if speechPlayer.isPlaying {
             speechPlayer.stop()
             sender.setTitle("Play", for: .normal)
         } else {

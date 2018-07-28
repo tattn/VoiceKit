@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		244728FA20727C6C005DB819 /* AudioPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244728F920727C6C005DB819 /* AudioPath.swift */; };
 		24979F06210C713A0016E77F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24979F05210C713A0016E77F /* Main.storyboard */; };
+		24979F08210C778C0016E77F /* SampleVoice.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 24979F07210C778C0016E77F /* SampleVoice.m4a */; };
 		24FB2B942070CE5500D73CCE /* VoiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FB2B922070CE5500D73CCE /* VoiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24FB2BA12070D0D500D73CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BA02070D0D500D73CCE /* AppDelegate.swift */; };
 		24FB2BA32070D0D500D73CCE /* SpeechRecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BA22070D0D500D73CCE /* SpeechRecognizeViewController.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		244728F920727C6C005DB819 /* AudioPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPath.swift; sourceTree = "<group>"; };
 		24979F05210C713A0016E77F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		24979F07210C778C0016E77F /* SampleVoice.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVoice.m4a; sourceTree = "<group>"; };
 		24FB2B8F2070CE5500D73CCE /* VoiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VoiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FB2B922070CE5500D73CCE /* VoiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceKit.h; sourceTree = "<group>"; };
 		24FB2B932070CE5500D73CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		24FB2B9F2070D0D500D73CCE /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				24979F07210C778C0016E77F /* SampleVoice.m4a */,
 				24FB2BA02070D0D500D73CCE /* AppDelegate.swift */,
 				24FB2BA22070D0D500D73CCE /* SpeechRecognizeViewController.swift */,
 				24FB2BA42070D0D500D73CCE /* SpeechRecognizeViewController.storyboard */,
@@ -233,6 +236,7 @@
 			files = (
 				24FB2BAB2070D0D500D73CCE /* LaunchScreen.storyboard in Resources */,
 				24FB2BA82070D0D500D73CCE /* Assets.xcassets in Resources */,
+				24979F08210C778C0016E77F /* SampleVoice.m4a in Resources */,
 				24FB2BA62070D0D500D73CCE /* SpeechRecognizeViewController.storyboard in Resources */,
 				24979F06210C713A0016E77F /* Main.storyboard in Resources */,
 			);
