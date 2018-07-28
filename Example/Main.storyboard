@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="da7-HG-hPN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ecz-pm-1a4">
+            <objects>
+                <viewController id="JvA-a8-hFA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oXx-c2-a0O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZTq-PL-cJU">
+                                <rect key="frame" x="119" y="318.5" width="137" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iS-6C-ean">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                        <state key="normal" title="Speech Recognition"/>
+                                        <connections>
+                                            <segue destination="D97-hs-d2W" kind="show" id="4q3-Pc-sCe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZTq-PL-cJU" firstAttribute="centerX" secondItem="oXx-c2-a0O" secondAttribute="centerX" id="O4n-iL-C2c"/>
+                            <constraint firstItem="ZTq-PL-cJU" firstAttribute="centerY" secondItem="oXx-c2-a0O" secondAttribute="centerY" id="gmY-Qj-Ar2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9YX-SG-hSt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4mH-KY-FxY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoV-15-xIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="142.57871064467767"/>
+        </scene>
+        <!--SpeechRecognizeViewController-->
+        <scene sceneID="3DE-HP-jEM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SpeechRecognizeViewController" id="D97-hs-d2W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZr-aX-3xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.8" y="159.22038980509745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Smi-SF-0JG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="da7-HG-hPN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d98-B1-YDw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JvA-a8-hFA" kind="relationship" relationship="rootViewController" id="6YW-bN-OYv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlu-FN-7Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+</document>

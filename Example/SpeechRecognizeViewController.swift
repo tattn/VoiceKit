@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SpeechRecognizeViewController.swift
 //  Example
 //
 //  Created by Tatsuya Tanaka on 20180401.
@@ -9,7 +9,7 @@
 import UIKit
 import VoiceKit
 
-class ViewController: UIViewController {
+class SpeechRecognizeViewController: UIViewController {
     @IBOutlet private weak var recordButton: UIButton!
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var textView: UITextView!

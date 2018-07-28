@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		244728FA20727C6C005DB819 /* AudioPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244728F920727C6C005DB819 /* AudioPath.swift */; };
+		24979F06210C713A0016E77F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24979F05210C713A0016E77F /* Main.storyboard */; };
 		24FB2B942070CE5500D73CCE /* VoiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FB2B922070CE5500D73CCE /* VoiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24FB2BA12070D0D500D73CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BA02070D0D500D73CCE /* AppDelegate.swift */; };
-		24FB2BA32070D0D500D73CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BA22070D0D500D73CCE /* ViewController.swift */; };
-		24FB2BA62070D0D500D73CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FB2BA42070D0D500D73CCE /* Main.storyboard */; };
+		24FB2BA32070D0D500D73CCE /* SpeechRecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BA22070D0D500D73CCE /* SpeechRecognizeViewController.swift */; };
+		24FB2BA62070D0D500D73CCE /* SpeechRecognizeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FB2BA42070D0D500D73CCE /* SpeechRecognizeViewController.storyboard */; };
 		24FB2BA82070D0D500D73CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FB2BA72070D0D500D73CCE /* Assets.xcassets */; };
 		24FB2BAB2070D0D500D73CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FB2BA92070D0D500D73CCE /* LaunchScreen.storyboard */; };
 		24FB2BB12070D1B700D73CCE /* SpeechRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2BB02070D1B700D73CCE /* SpeechRecorder.swift */; };
@@ -47,13 +48,14 @@
 
 /* Begin PBXFileReference section */
 		244728F920727C6C005DB819 /* AudioPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPath.swift; sourceTree = "<group>"; };
+		24979F05210C713A0016E77F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24FB2B8F2070CE5500D73CCE /* VoiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VoiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FB2B922070CE5500D73CCE /* VoiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceKit.h; sourceTree = "<group>"; };
 		24FB2B932070CE5500D73CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24FB2B9E2070D0D500D73CCE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FB2BA02070D0D500D73CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24FB2BA22070D0D500D73CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24FB2BA52070D0D500D73CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24FB2BA22070D0D500D73CCE /* SpeechRecognizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizeViewController.swift; sourceTree = "<group>"; };
+		24FB2BA52070D0D500D73CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SpeechRecognizeViewController.storyboard; sourceTree = "<group>"; };
 		24FB2BA72070D0D500D73CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24FB2BAA2070D0D500D73CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24FB2BAC2070D0D500D73CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,11 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				24FB2BA02070D0D500D73CCE /* AppDelegate.swift */,
-				24FB2BA22070D0D500D73CCE /* ViewController.swift */,
-				24FB2BA42070D0D500D73CCE /* Main.storyboard */,
+				24FB2BA22070D0D500D73CCE /* SpeechRecognizeViewController.swift */,
+				24FB2BA42070D0D500D73CCE /* SpeechRecognizeViewController.storyboard */,
 				24FB2BA72070D0D500D73CCE /* Assets.xcassets */,
 				24FB2BA92070D0D500D73CCE /* LaunchScreen.storyboard */,
 				24FB2BAC2070D0D500D73CCE /* Info.plist */,
+				24979F05210C713A0016E77F /* Main.storyboard */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -230,7 +233,8 @@
 			files = (
 				24FB2BAB2070D0D500D73CCE /* LaunchScreen.storyboard in Resources */,
 				24FB2BA82070D0D500D73CCE /* Assets.xcassets in Resources */,
-				24FB2BA62070D0D500D73CCE /* Main.storyboard in Resources */,
+				24FB2BA62070D0D500D73CCE /* SpeechRecognizeViewController.storyboard in Resources */,
+				24979F06210C713A0016E77F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24FB2BA32070D0D500D73CCE /* ViewController.swift in Sources */,
+				24FB2BA32070D0D500D73CCE /* SpeechRecognizeViewController.swift in Sources */,
 				24FB2BA12070D0D500D73CCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,12 +272,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24FB2BA42070D0D500D73CCE /* Main.storyboard */ = {
+		24FB2BA42070D0D500D73CCE /* SpeechRecognizeViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				24FB2BA52070D0D500D73CCE /* Base */,
 			);
-			name = Main.storyboard;
+			name = SpeechRecognizeViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		24FB2BA92070D0D500D73CCE /* LaunchScreen.storyboard */ = {
