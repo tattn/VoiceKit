@@ -19,13 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZTq-PL-cJU">
-                                <rect key="frame" x="119" y="318.5" width="137" height="30"/>
+                                <rect key="frame" x="119" y="298.5" width="137" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iS-6C-ean">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
                                         <state key="normal" title="Speech Recognition"/>
                                         <connections>
                                             <segue destination="D97-hs-d2W" kind="show" id="4q3-Pc-sCe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWW-JZ-Zhr">
+                                        <rect key="frame" x="0.0" y="40" width="137" height="30"/>
+                                        <state key="normal" title="Voice Changer"/>
+                                        <connections>
+                                            <segue destination="VFO-JR-irx" kind="show" id="bQi-qw-D0H"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -51,6 +58,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZr-aX-3xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624.8" y="159.22038980509745"/>
+        </scene>
+        <!--VoiceChanger-->
+        <scene sceneID="Cbm-sH-CmH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VoiceChanger" id="VFO-JR-irx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2LC-hy-ffE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576" y="255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Smi-SF-0JG">

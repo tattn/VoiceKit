@@ -12,6 +12,7 @@ public enum AudioURL {
     case document(filePath: String)
     case temporary(filePath: String)
     case web(url: String)
+    case fullPath(URL)
 
     public var url: URL {
         switch self {
@@ -23,6 +24,8 @@ public enum AudioURL {
             return url.appendingPathComponent(filePath)
         case .web(let url):
             return URL(string: url) ?? .init(fileURLWithPath: "")
+        case .fullPath(let path):
+            return path
         }
     }
 

@@ -15,7 +15,7 @@ class SpeechRecognizeViewController: UIViewController {
     @IBOutlet private weak var textView: UITextView!
 
     private let speechRecorder = SpeechRecorder()
-    private let speechPlayer = SpeechPlayer()
+    private let speechPlayer = try! SpeechPlayer()
     private let speechRecognizer = SpeechRecognizer(locale: .init(identifier: "ja_JP"))!
     
     override func viewDidLoad() {

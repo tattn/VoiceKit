@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jik-lM-nJT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voice Changer View Controller-->
+        <scene sceneID="nqY-hG-IiM">
+            <objects>
+                <viewController id="jik-lM-nJT" customClass="VoiceChangerViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kBx-iz-TdF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hvF-CD-Z1h">
+                                <rect key="frame" x="8" y="318" width="359" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playback Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4X-MO-jwx">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="97s-aU-uo5">
+                                        <rect key="frame" x="114" y="0.0" width="247" height="31"/>
+                                        <connections>
+                                            <action selector="didChangePlalybackRate:" destination="jik-lM-nJT" eventType="valueChanged" id="iKc-Rv-SMP"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyR-QP-JmM">
+                                <rect key="frame" x="172" y="607" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="didTapPlayButton:" destination="jik-lM-nJT" eventType="touchUpInside" id="1KV-ig-jYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZyR-QP-JmM" firstAttribute="centerX" secondItem="kBx-iz-TdF" secondAttribute="centerX" id="6Oj-Mg-mID"/>
+                            <constraint firstItem="hvF-CD-Z1h" firstAttribute="leading" secondItem="2Xg-OQ-UwM" secondAttribute="leading" constant="8" id="8iR-i7-Nwf"/>
+                            <constraint firstItem="2Xg-OQ-UwM" firstAttribute="bottom" secondItem="ZyR-QP-JmM" secondAttribute="bottom" constant="30" id="gAy-S7-0m7"/>
+                            <constraint firstAttribute="trailing" secondItem="hvF-CD-Z1h" secondAttribute="trailing" constant="8" id="qOh-ol-M2Z"/>
+                            <constraint firstItem="hvF-CD-Z1h" firstAttribute="centerY" secondItem="kBx-iz-TdF" secondAttribute="centerY" id="vyl-x3-bMx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Xg-OQ-UwM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Laq-SF-iMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="298"/>
+        </scene>
+    </scenes>
+</document>

@@ -20,8 +20,8 @@ public final class SpeechPlayer: NSObject {
         return player.isPlaying
     }
 
-    public required init(url: AudioURL = .defaultURL) {
-        player = try! AVAudioPlayer(contentsOf: url.url)
+    public required init(url: AudioURL = .defaultURL) throws {
+        player = try AVAudioPlayer(contentsOf: url.url)
         super.init()
         player.enableRate = true
         player.delegate = self
