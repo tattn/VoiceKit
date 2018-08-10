@@ -15,12 +15,16 @@ class SpeechRecognizeViewController: UIViewController {
     @IBOutlet private weak var textView: UITextView!
 
     private let speechRecorder = SpeechRecorder()
-    private let speechPlayer = try! SpeechPlayer()
+    private var speechPlayer: SpeechPlayer?
     private let speechRecognizer = SpeechRecognizer(locale: .init(identifier: "ja_JP"))!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        speechRecorder.isMeteringEnabled = true
+        let timer = Timer.init(timeInterval: 0.1, repeats: true) { _ in
+            print(self.speechRecorder.currentAveragePower)
+        }
+        RunLoop.main.add(timer, forMode: .commonModes)
     }
 
     @IBAction func didTapRecordButton(_ sender: UIButton) {
@@ -34,6 +38,8 @@ class SpeechRecognizeViewController: UIViewController {
     }
 
     @IBAction func didTapPlayButton(_ sender: UIButton) {
+        guard let speechPlayer = try? SpeechPlayer() else { return }
+        self.speechPlayer = speechPlayer
         if speechPlayer.isPlaying {
             speechPlayer.stop()
             sender.setTitle("Play", for: .normal)

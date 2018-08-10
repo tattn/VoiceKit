@@ -19,6 +19,20 @@ public final class SpeechRecorder: NSObject {
         return recorder != nil
     }
 
+    public var isMeteringEnabled = false {
+        didSet { recorder?.isMeteringEnabled = isMeteringEnabled }
+    }
+
+    public var currentAveragePower: Float {
+        recorder?.updateMeters()
+        return recorder?.averagePower(forChannel: 0) ?? 0
+    }
+
+    public var currentPeakPower: Float {
+        recorder?.updateMeters()
+        return recorder?.peakPower(forChannel: 0) ?? 0
+    }
+
     public required override init() {
         super.init()
     }
@@ -47,6 +61,7 @@ public final class SpeechRecorder: NSObject {
         let recorder = try AVAudioRecorder(url: url.url, settings: settings)
         self.recorder = recorder
         recorder.delegate = self
+        recorder.isMeteringEnabled = isMeteringEnabled
         recorder.record()
         
         self.completion = completion

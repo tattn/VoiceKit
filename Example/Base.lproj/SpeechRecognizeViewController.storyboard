@@ -18,41 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-9j-yPm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-9j-yPm">
                                 <rect key="frame" x="145" y="42" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PpU-cl-H19"/>
+                                    <constraint firstAttribute="width" constant="85" id="glP-4h-k3H"/>
+                                </constraints>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="didTapRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbj-kc-jec"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-Zd-E8X">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-Zd-E8X">
                                 <rect key="frame" x="164" y="137" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="EyY-8h-PSp"/>
+                                    <constraint firstAttribute="height" constant="30" id="zGb-gj-nC3"/>
+                                </constraints>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="didTapPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1DA-pz-H0u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igd-4z-Qk0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igd-4z-Qk0">
                                 <rect key="frame" x="145" y="318" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mph-hL-mLE"/>
+                                    <constraint firstAttribute="width" constant="84" id="rrb-qM-5Xn"/>
+                                </constraints>
                                 <state key="normal" title="Recognize"/>
                                 <connections>
                                     <action selector="didTapRecognizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XER-OS-Tjo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ieK-5K-sGX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ieK-5K-sGX">
                                 <rect key="frame" x="0.0" y="372" width="375" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="ZPh-aU-gHA"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WD-UF-hzT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WD-UF-hzT">
                                 <rect key="frame" x="105" y="603" width="164" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wgf-ac-Ryb"/>
+                                    <constraint firstAttribute="width" constant="164" id="yCf-ZT-Jea"/>
+                                </constraints>
                                 <state key="normal" title="Recognize (audio file)"/>
                                 <connections>
                                     <action selector="didTapRecognizeAudioFileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6px-JX-OMY"/>
@@ -60,6 +74,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2WD-UF-hzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2YN-K4-Skl"/>
+                            <constraint firstItem="igd-4z-Qk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EdB-a1-QIs"/>
+                            <constraint firstItem="Rsi-9j-yPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H61-oe-R81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2WD-UF-hzT" secondAttribute="bottom" constant="34" id="LUn-LY-RWS"/>
+                            <constraint firstItem="2WD-UF-hzT" firstAttribute="top" secondItem="ieK-5K-sGX" secondAttribute="bottom" constant="38" id="NhD-yN-wxn"/>
+                            <constraint firstItem="ieK-5K-sGX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VId-vr-34N"/>
+                            <constraint firstItem="wQ7-Zd-E8X" firstAttribute="top" secondItem="Rsi-9j-yPm" secondAttribute="bottom" constant="65" id="WB3-hy-sLP"/>
+                            <constraint firstItem="Rsi-9j-yPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="igN-xv-QCi"/>
+                            <constraint firstItem="ieK-5K-sGX" firstAttribute="top" secondItem="igd-4z-Qk0" secondAttribute="bottom" constant="24" id="o4B-KN-EdC"/>
+                            <constraint firstItem="ieK-5K-sGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t7E-Yi-V6u"/>
+                            <constraint firstItem="wQ7-Zd-E8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xB2-YR-mDq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
